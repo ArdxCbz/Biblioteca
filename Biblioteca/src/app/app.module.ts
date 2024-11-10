@@ -9,6 +9,7 @@ import { DetalleLibroComponent } from './componentes/detalle-libro/detalle-libro
 import { HomeComponent } from './componentes/home/home.component';
 import { BuscarLibroComponent } from './componentes/buscar-libro/buscar-libro.component';
 import { EditarLibroComponent } from './componentes/editar-libro/editar-libro.component';
+import { EliminarLibroComponent } from './componentes/eliminar-libro/eliminar-libro.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditarLibroComponent } from './componentes/editar-libro/editar-libro.co
     DetalleLibroComponent,
     HomeComponent,
     BuscarLibroComponent,
-    EditarLibroComponent
+    EditarLibroComponent,
+    EliminarLibroComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@
         <th>Título</th>
         <th>Autor</th>
         <th>Año</th>
-        <th>Acciones</th>  <!-- Columna para las acciones (editar) -->
+        <th>Acciones</th>  <!-- Columna para las acciones -->
       </tr>
     </thead>
     <tbody>
@@ -18,8 +18,8 @@
         <td>{{ libro.autor }}</td>
         <td>{{ libro.year }}</td>
         <td>
-          <!-- Enlace para editar el libro, pasando el id como parámetro -->
           <button [routerLink]="['/editar-libro', libro.id]">Editar</button>
+          <button [routerLink]="['/eliminar-libro', libro.id]">Eliminar</button>  <!-- Botón de eliminar -->
         </td>
       </tr>
     </tbody>

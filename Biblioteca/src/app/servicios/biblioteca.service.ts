@@ -1,4 +1,5 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
@@ -44,4 +45,15 @@ export class BibliotecaService {
       }
     }
   }
+  // Eliminar un libro
+eliminarLibro(id: number): void {
+  if (isPlatformBrowser(this.platformId)) {
+    let libros = this.obtenerLibros();
+    // Filtramos los libros para eliminar el que coincide con el id
+    libros = libros.filter(libro => libro.id !== id);
+    // Actualizamos el LocalStorage con la nueva lista
+    localStorage.setItem(this.librosKey, JSON.stringify(libros));
+  }
+}
+  
 }
