@@ -1,23 +1,27 @@
 <p>lista-libros works!</p>
 <div class="lista-libros">
-    <h2>Lista de Libros</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Título</th>
-          <th>Autor</th>
-          <th>Año</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let libro of libros">
-          <td>{{ libro.id }}</td>
-          <td>{{ libro.titulo }}</td>
-          <td>{{ libro.autor }}</td>
-          <td>{{ libro.year }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+  <h2>Lista de Libros</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Año</th>
+        <th>Acciones</th>  <!-- Columna para las acciones (editar) -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let libro of libros">
+        <td>{{ libro.id }}</td>
+        <td>{{ libro.titulo }}</td>
+        <td>{{ libro.autor }}</td>
+        <td>{{ libro.year }}</td>
+        <td>
+          <!-- Enlace para editar el libro, pasando el id como parámetro -->
+          <button [routerLink]="['/editar-libro', libro.id]">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

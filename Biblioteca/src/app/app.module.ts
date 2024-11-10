@@ -8,6 +8,7 @@ import { ListaLibrosComponent } from './componentes/lista-libros/lista-libros.co
 import { DetalleLibroComponent } from './componentes/detalle-libro/detalle-libro.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { BuscarLibroComponent } from './componentes/buscar-libro/buscar-libro.component';
+import { EditarLibroComponent } from './componentes/editar-libro/editar-libro.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BuscarLibroComponent } from './componentes/buscar-libro/buscar-libro.co
     ListaLibrosComponent,
     DetalleLibroComponent,
     HomeComponent,
-    BuscarLibroComponent
+    BuscarLibroComponent,
+    EditarLibroComponent
   ],
   imports: [
     BrowserModule,

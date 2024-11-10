@@ -5,6 +5,7 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root'
 })
 export class BibliotecaService {
+
   private librosKey = 'libros';
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
@@ -29,6 +30,18 @@ export class BibliotecaService {
       // Agregar el nuevo libro al array y actualizar LocalStorage
       libros.push(libro);
       localStorage.setItem(this.librosKey, JSON.stringify(libros));
+    }
+  }
+
+  // Editar un libro existente
+  editarLibro(libro: { id: number; titulo: string; autor: string; year: number }) {
+    if (isPlatformBrowser(this.platformId)) {
+      const libros = this.obtenerLibros();
+      const index = libros.findIndex(l => l.id === libro.id);
+      if (index !== -1) {
+        libros[index] = libro;  // Actualizar el libro en el arreglo
+        localStorage.setItem(this.librosKey, JSON.stringify(libros));  // Guardar de nuevo en localStorage
+      }
     }
   }
 }
