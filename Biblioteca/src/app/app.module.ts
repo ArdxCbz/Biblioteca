@@ -7,6 +7,7 @@ import { AgregarLibroComponent } from './componentes/agregar-libro/agregar-libro
 import { ListaLibrosComponent } from './componentes/lista-libros/lista-libros.component';
 import { DetalleLibroComponent } from './componentes/detalle-libro/detalle-libro.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { BuscarLibroComponent } from './componentes/buscar-libro/buscar-libro.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HomeComponent } from './componentes/home/home.component';
     AgregarLibroComponent,
     ListaLibrosComponent,
     DetalleLibroComponent,
-    HomeComponent
+    HomeComponent,
+    BuscarLibroComponent
   ],
   imports: [
     BrowserModule,
