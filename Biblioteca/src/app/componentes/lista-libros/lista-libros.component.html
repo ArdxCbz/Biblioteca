@@ -1,0 +1,23 @@
+<p>lista-libros works!</p>
+<div class="lista-libros">
+    <h2>Lista de Libros</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Año</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let libro of libros">
+          <td>{{ libro.id }}</td>
+          <td>{{ libro.titulo }}</td>
+          <td>{{ libro.autor }}</td>
+          <td>{{ libro.year }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
